@@ -48,8 +48,13 @@
     // Release any retained subviews of the main view.
 }
 
-- (IBAction)setColorToNormalTitle:(UIButton *)sender {
+- (IBAction)setColorToNormalTitle:(UIButton *)sender
+{
     _color = [sender titleColorForState:UIControlStateNormal];
 }
 
+- (IBAction)eraseDrawing
+{
+    [drawingView erase];
+}
 @end

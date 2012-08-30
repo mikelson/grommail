@@ -189,6 +189,22 @@
                                     <action selector="setColorToNormalTitle:" destination="UpO-yj-n4F" eventType="touchUpInside" id="YAS-dm-8of"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="t5m-XN-j7b">
+                                <rect key="frame" x="20" y="564" width="128" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="erase">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="eraseDrawing" destination="UpO-yj-n4F" eventType="touchUpInside" id="bIo-tD-PZu"/>
+                                    <action selector="setColorToNormalTitle:" destination="UpO-yj-n4F" eventType="touchUpInside" id="oZu-X9-P6W"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -212,24 +228,6 @@
         <image name="paint-white.tif" width="128" height="128"/>
         <image name="paint-yellow.tif" width="128" height="128"/>
     </resources>
-    <classes>
-        <class className="DrawingView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrawingView.h"/>
-        </class>
-        <class className="DrawingViewController" superclassName="MyViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrawingViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="setColorToNormalTitle:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="drawingView" candidateClass="DrawingView"/>
-            </relationships>
-        </class>
-        <class className="MyNavigationControllerViewController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyNavigationControllerViewController.h"/>
-        </class>
-        <class className="MyViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

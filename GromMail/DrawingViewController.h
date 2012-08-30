@@ -22,4 +22,6 @@
 
 - (IBAction)setColorToNormalTitle:(UIButton *)sender;
 
+- (IBAction)eraseDrawing;
+
 @end

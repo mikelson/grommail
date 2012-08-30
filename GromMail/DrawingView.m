@@ -17,6 +17,7 @@
 - (void)addLineToPoint:(CGPoint)point;
 - (CGPoint)currentPoint;
 - (void)stroke;
+- (void)removeAllPointsBeforeCurrent;
 @end
 @implementation MyPath
 
@@ -61,6 +62,13 @@
     } else {
         [self.bezier stroke];
     }
+}
+
+- (void)removeAllPointsBeforeCurrent
+{
+    CGPoint currentPoint = [self.bezier currentPoint];
+    [self.bezier removeAllPoints];
+    [self.bezier moveToPoint:currentPoint];
 }
 @end
 
@@ -189,4 +197,13 @@
     [serialization writeToFile:pngPath atomically:YES];
 }
 
+- (void)erase
+{
+    BOOL needsDisplay = image || [paths count];
+    image = nil;
+    [paths makeObjectsPerformSelector:@selector(removeAllPointsBeforeCurrent)];
+    if (needsDisplay) {
+        [self setNeedsDisplay];
+    }
+}
 @end

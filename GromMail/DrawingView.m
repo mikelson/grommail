@@ -9,7 +9,10 @@
 #import "DrawingView.h"
 #import <QuartzCore/QuartzCore.h>
 
+// Private class representing currently drawn vector.
+
 @interface MyPath : NSObject
+
 @property (readonly) UIBezierPath* bezier;
 @property (readonly) UITouch* touch; // touch associated with this path
 @property (readonly) int size; // UIBezierPath doesn't expose this easily.
@@ -18,7 +21,9 @@
 - (CGPoint)currentPoint;
 - (void)stroke;
 - (void)removeAllPointsBeforeCurrent;
+
 @end
+
 @implementation MyPath
 
 - (id)initWithTouch:(UITouch*)aTouch
@@ -70,14 +75,20 @@
     [self.bezier removeAllPoints];
     [self.bezier moveToPoint:currentPoint];
 }
+
 @end
 
+// Private member variables for DrawingView
+
 @interface DrawingView ()
+
 {
     NSMutableSet* paths;
     UIImage* image;
 }
+
 @end
+
 @implementation DrawingView
 
 // Called when inited by nib, the only way DrawingView gets inited.
@@ -93,6 +104,26 @@
         image = [UIImage imageWithContentsOfFile:pngPath];
     }
     return self;
+}
+
+- (void)dealloc
+{
+    [self saveViewToImage];
+    
+    // Save data to a file.
+    NSData* serialization = UIImagePNGRepresentation(image);
+    NSString *pngPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/GromMail-drawing.png"];
+    [serialization writeToFile:pngPath atomically:YES];
+}
+
+// Private utility function - render current view into UIImage back buffer.
+- (void)saveViewToImage
+{
+    // Save current in an image
+    UIGraphicsBeginImageContext(self.bounds.size);
+    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+    image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
 }
 
 /*
@@ -126,15 +157,6 @@
     }
     // TODO: should we flush paths to image when number of points in paths gets too high?
     // Doesn't seem to be a problem on iPad 2...
-}
-
-- (void)saveViewToImage
-{
-    // Save current in an image
-    UIGraphicsBeginImageContext(self.bounds.size);
-    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
-    image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -174,8 +196,7 @@
     [self touchesEnded:touches withEvent:event];
 }
 
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
+// perform custom drawing.
 - (void)drawRect:(CGRect)rect
 {
     UIColor* color = self.colorSource.color;
@@ -185,16 +206,6 @@
     for (MyPath* path in paths) {
         [path stroke];
     }
-}
-
-- (void)dealloc
-{
-    [self saveViewToImage];
-    
-    // Save data to a file.
-    NSData* serialization = UIImagePNGRepresentation(image);
-    NSString *pngPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/GromMail-drawing.png"];
-    [serialization writeToFile:pngPath atomically:YES];
 }
 
 - (void)erase

@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B41C895415EDD3EA00A26B03 /* paint-red.tif in Resources */ = {isa = PBXBuildFile; fileRef = B41C895215EDD3EA00A26B03 /* paint-red.tif */; };
+		B41C895515EDD3EA00A26B03 /* paint-white.tif in Resources */ = {isa = PBXBuildFile; fileRef = B41C895315EDD3EA00A26B03 /* paint-white.tif */; };
+		B41C895E15EDD6BB00A26B03 /* paint-black.tif in Resources */ = {isa = PBXBuildFile; fileRef = B41C895715EDD6BB00A26B03 /* paint-black.tif */; };
+		B41C895F15EDD6BB00A26B03 /* paint-blue.tif in Resources */ = {isa = PBXBuildFile; fileRef = B41C895815EDD6BB00A26B03 /* paint-blue.tif */; };
+		B41C896115EDD6BB00A26B03 /* paint-brown.tif in Resources */ = {isa = PBXBuildFile; fileRef = B41C895A15EDD6BB00A26B03 /* paint-brown.tif */; };
+		B41C896215EDD6BB00A26B03 /* paint-green.tif in Resources */ = {isa = PBXBuildFile; fileRef = B41C895B15EDD6BB00A26B03 /* paint-green.tif */; };
+		B41C896315EDD6BB00A26B03 /* paint-pink-255-111-207.tif in Resources */ = {isa = PBXBuildFile; fileRef = B41C895C15EDD6BB00A26B03 /* paint-pink-255-111-207.tif */; };
+		B41C896415EDD6BB00A26B03 /* paint-yellow.tif in Resources */ = {isa = PBXBuildFile; fileRef = B41C895D15EDD6BB00A26B03 /* paint-yellow.tif */; };
+		B41C896715EDDC0300A26B03 /* DrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B41C896615EDDC0300A26B03 /* DrawingViewController.m */; };
+		B427B28B15F2A4DE00991195 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B427B28915F2A4DE00991195 /* Model.xcdatamodeld */; };
+		B427B91315F2CB9100991195 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B427B91215F2CB9100991195 /* CFNetwork.framework */; };
+		B427B91515F2CBC700991195 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B427B91415F2CBC700991195 /* libiconv.dylib */; };
+		B427BF9F15F2CD1000991195 /* libmailcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B427BF9815F2CCCB00991195 /* libmailcore.a */; };
+		B427BFA315F2CD1000991195 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B427BFA015F2CD1000991195 /* libcrypto.a */; };
+		B427BFA415F2CD1000991195 /* libsasl2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B427BFA115F2CD1000991195 /* libsasl2.a */; };
+		B427BFA515F2CD1000991195 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B427BFA215F2CD1000991195 /* libssl.a */; };
+		B427BFAA15F2D8B800991195 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B427BFA915F2D8B800991195 /* User.m */; };
+		B427BFAD15F2D8F400991195 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = B427BFAC15F2D8F400991195 /* Contact.m */; };
+		B427BFB315F2DC3C00991195 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B427BFB215F2DC3C00991195 /* CoreData.framework */; };
+		B427BFB615F2E40A00991195 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B427BFB515F2E40A00991195 /* SettingsViewController.m */; };
+		B427BFB815F2E7DD00991195 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B427BFB715F2E7DD00991195 /* CoreData.framework */; };
+		B427BFC115F412D100991195 /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B427BFC015F412D100991195 /* ContactTableViewCell.m */; };
 		B4B9837715EC6E9500485407 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B9837615EC6E9500485407 /* UIKit.framework */; };
 		B4B9837915EC6E9500485407 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B9837815EC6E9500485407 /* Foundation.framework */; };
 		B4B9837B15EC6E9500485407 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B9837A15EC6E9500485407 /* CoreGraphics.framework */; };
@@ -15,15 +37,46 @@
 		B4B9838715EC6E9500485407 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B9838615EC6E9500485407 /* AppDelegate.m */; };
 		B4B9838A15EC6E9500485407 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B9838815EC6E9500485407 /* MainStoryboard_iPhone.storyboard */; };
 		B4B9838D15EC6E9500485407 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B9838B15EC6E9500485407 /* MainStoryboard_iPad.storyboard */; };
-		B4B9839015EC6E9500485407 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B9838F15EC6E9500485407 /* ViewController.m */; };
 		B4B9839815EC6E9500485407 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B9839715EC6E9500485407 /* SenTestingKit.framework */; };
 		B4B9839915EC6E9500485407 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B9837615EC6E9500485407 /* UIKit.framework */; };
 		B4B9839A15EC6E9500485407 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B9837815EC6E9500485407 /* Foundation.framework */; };
 		B4B983A215EC6E9500485407 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4B983A015EC6E9500485407 /* InfoPlist.strings */; };
 		B4B983A515EC6E9500485407 /* GromMailTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B983A415EC6E9500485407 /* GromMailTests.m */; };
+		B4B983B015EC7FB900485407 /* MyNavigationControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B983AF15EC7FB900485407 /* MyNavigationControllerViewController.m */; };
+		B4B983B315EC847900485407 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B983B215EC847900485407 /* MyViewController.m */; };
+		B4B983BA15ED1FEF00485407 /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B983B915ED1FEF00485407 /* DrawingView.m */; };
+		B4DBA86115FFAA5C007CCE63 /* EmailAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DBA86015FFAA5C007CCE63 /* EmailAddress.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B427BF9515F2CCCB00991195 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B427BF7E15F2CCC800991195 /* MailCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = MailCore;
+		};
+		B427BF9715F2CCCB00991195 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B427BF7E15F2CCC800991195 /* MailCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8618B5710DADB5C00C41188;
+			remoteInfo = "MailCore iOS";
+		};
+		B427BF9915F2CCCB00991195 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B427BF7E15F2CCC800991195 /* MailCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8DFCF4915801A5000C01975;
+			remoteInfo = Tests;
+		};
+		B427BFA615F2CD2300991195 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B427BF7E15F2CCC800991195 /* MailCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8618B5610DADB5C00C41188;
+			remoteInfo = "MailCore iOS";
+		};
 		B4B9839B15EC6E9500485407 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B4B9836915EC6E9500485407 /* Project object */;
@@ -34,6 +87,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B41C895215EDD3EA00A26B03 /* paint-red.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "paint-red.tif"; sourceTree = "<group>"; };
+		B41C895315EDD3EA00A26B03 /* paint-white.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "paint-white.tif"; sourceTree = "<group>"; };
+		B41C895715EDD6BB00A26B03 /* paint-black.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "paint-black.tif"; sourceTree = "<group>"; };
+		B41C895815EDD6BB00A26B03 /* paint-blue.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "paint-blue.tif"; sourceTree = "<group>"; };
+		B41C895A15EDD6BB00A26B03 /* paint-brown.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "paint-brown.tif"; sourceTree = "<group>"; };
+		B41C895B15EDD6BB00A26B03 /* paint-green.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "paint-green.tif"; sourceTree = "<group>"; };
+		B41C895C15EDD6BB00A26B03 /* paint-pink-255-111-207.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "paint-pink-255-111-207.tif"; sourceTree = "<group>"; };
+		B41C895D15EDD6BB00A26B03 /* paint-yellow.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "paint-yellow.tif"; sourceTree = "<group>"; };
+		B41C896515EDDC0300A26B03 /* DrawingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingViewController.h; sourceTree = "<group>"; };
+		B41C896615EDDC0300A26B03 /* DrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingViewController.m; sourceTree = "<group>"; };
+		B427B28A15F2A4DE00991195 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		B427B91215F2CB9100991195 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B427B91415F2CBC700991195 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		B427BF7E15F2CCC800991195 /* MailCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MailCore.xcodeproj; path = ../MailCore/MailCore.xcodeproj; sourceTree = "<group>"; };
+		B427BFA015F2CD1000991195 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../MailCore/iOSPorts/ports/security/openssl/build/Release-iphoneos/libcrypto.a"; sourceTree = "<group>"; };
+		B427BFA115F2CD1000991195 /* libsasl2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsasl2.a; path = "../MailCore/iOSPorts/ports/security/cyrus-sasl/build/Release-iphoneos/libsasl2.a"; sourceTree = "<group>"; };
+		B427BFA215F2CD1000991195 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../MailCore/iOSPorts/ports/security/openssl/build/Release-iphoneos/libssl.a"; sourceTree = "<group>"; };
+		B427BFA815F2D8B800991195 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		B427BFA915F2D8B800991195 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		B427BFAB15F2D8F400991195 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		B427BFAC15F2D8F400991195 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		B427BFB215F2DC3C00991195 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B427BFB415F2E40A00991195 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		B427BFB515F2E40A00991195 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		B427BFB715F2E7DD00991195 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B427BFBF15F412D000991195 /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewCell.h; sourceTree = "<group>"; };
+		B427BFC015F412D100991195 /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewCell.m; sourceTree = "<group>"; };
 		B4B9837215EC6E9500485407 /* GromMail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GromMail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B9837615EC6E9500485407 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B4B9837815EC6E9500485407 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -46,14 +126,20 @@
 		B4B9838615EC6E9500485407 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B4B9838915EC6E9500485407 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		B4B9838C15EC6E9500485407 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		B4B9838E15EC6E9500485407 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B4B9838F15EC6E9500485407 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B4B9839615EC6E9500485407 /* GromMailTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GromMailTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B9839715EC6E9500485407 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		B4B9839F15EC6E9500485407 /* GromMailTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GromMailTests-Info.plist"; sourceTree = "<group>"; };
 		B4B983A115EC6E9500485407 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B4B983A315EC6E9500485407 /* GromMailTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GromMailTests.h; sourceTree = "<group>"; };
 		B4B983A415EC6E9500485407 /* GromMailTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GromMailTests.m; sourceTree = "<group>"; };
+		B4B983AE15EC7FB900485407 /* MyNavigationControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationControllerViewController.h; sourceTree = "<group>"; };
+		B4B983AF15EC7FB900485407 /* MyNavigationControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationControllerViewController.m; sourceTree = "<group>"; };
+		B4B983B115EC847900485407 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		B4B983B215EC847900485407 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		B4B983B815ED1FEF00485407 /* DrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
+		B4B983B915ED1FEF00485407 /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
+		B4DBA85F15FFAA5C007CCE63 /* EmailAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailAddress.h; sourceTree = "<group>"; };
+		B4DBA86015FFAA5C007CCE63 /* EmailAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailAddress.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +147,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B427BFA315F2CD1000991195 /* libcrypto.a in Frameworks */,
+				B427BFA415F2CD1000991195 /* libsasl2.a in Frameworks */,
+				B427BFA515F2CD1000991195 /* libssl.a in Frameworks */,
+				B427BF9F15F2CD1000991195 /* libmailcore.a in Frameworks */,
+				B427B91515F2CBC700991195 /* libiconv.dylib in Frameworks */,
+				B427B91315F2CB9100991195 /* CFNetwork.framework in Frameworks */,
+				B427BFB315F2DC3C00991195 /* CoreData.framework in Frameworks */,
 				B4B9837715EC6E9500485407 /* UIKit.framework in Frameworks */,
 				B4B9837915EC6E9500485407 /* Foundation.framework in Frameworks */,
 				B4B9837B15EC6E9500485407 /* CoreGraphics.framework in Frameworks */,
+				B427BFB815F2E7DD00991195 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,9 +174,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B41C895115EDD3EA00A26B03 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				B41C895715EDD6BB00A26B03 /* paint-black.tif */,
+				B41C895815EDD6BB00A26B03 /* paint-blue.tif */,
+				B41C895A15EDD6BB00A26B03 /* paint-brown.tif */,
+				B41C895B15EDD6BB00A26B03 /* paint-green.tif */,
+				B41C895C15EDD6BB00A26B03 /* paint-pink-255-111-207.tif */,
+				B41C895D15EDD6BB00A26B03 /* paint-yellow.tif */,
+				B41C895215EDD3EA00A26B03 /* paint-red.tif */,
+				B41C895315EDD3EA00A26B03 /* paint-white.tif */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		B427BF7F15F2CCC800991195 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B427BF9615F2CCCB00991195 /* MailCore.framework */,
+				B427BF9815F2CCCB00991195 /* libmailcore.a */,
+				B427BF9A15F2CCCB00991195 /* Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B4B9836715EC6E9500485407 = {
 			isa = PBXGroup;
 			children = (
+				B427BFB215F2DC3C00991195 /* CoreData.framework */,
+				B427BF7E15F2CCC800991195 /* MailCore.xcodeproj */,
 				B4B9837C15EC6E9500485407 /* GromMail */,
 				B4B9839D15EC6E9500485407 /* GromMailTests */,
 				B4B9837515EC6E9500485407 /* Frameworks */,
@@ -102,6 +223,12 @@
 		B4B9837515EC6E9500485407 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B427BFB715F2E7DD00991195 /* CoreData.framework */,
+				B427BFA015F2CD1000991195 /* libcrypto.a */,
+				B427BFA115F2CD1000991195 /* libsasl2.a */,
+				B427BFA215F2CD1000991195 /* libssl.a */,
+				B427B91415F2CBC700991195 /* libiconv.dylib */,
+				B427B91215F2CB9100991195 /* CFNetwork.framework */,
 				B4B9837615EC6E9500485407 /* UIKit.framework */,
 				B4B9837815EC6E9500485407 /* Foundation.framework */,
 				B4B9837A15EC6E9500485407 /* CoreGraphics.framework */,
@@ -113,12 +240,30 @@
 		B4B9837C15EC6E9500485407 /* GromMail */ = {
 			isa = PBXGroup;
 			children = (
+				B427B28915F2A4DE00991195 /* Model.xcdatamodeld */,
+				B4DBA85F15FFAA5C007CCE63 /* EmailAddress.h */,
+				B4DBA86015FFAA5C007CCE63 /* EmailAddress.m */,
+				B427BFA815F2D8B800991195 /* User.h */,
+				B427BFA915F2D8B800991195 /* User.m */,
+				B427BFAB15F2D8F400991195 /* Contact.h */,
+				B427BFAC15F2D8F400991195 /* Contact.m */,
 				B4B9838515EC6E9500485407 /* AppDelegate.h */,
 				B4B9838615EC6E9500485407 /* AppDelegate.m */,
 				B4B9838815EC6E9500485407 /* MainStoryboard_iPhone.storyboard */,
 				B4B9838B15EC6E9500485407 /* MainStoryboard_iPad.storyboard */,
-				B4B9838E15EC6E9500485407 /* ViewController.h */,
-				B4B9838F15EC6E9500485407 /* ViewController.m */,
+				B427BFB415F2E40A00991195 /* SettingsViewController.h */,
+				B427BFB515F2E40A00991195 /* SettingsViewController.m */,
+				B427BFBF15F412D000991195 /* ContactTableViewCell.h */,
+				B427BFC015F412D100991195 /* ContactTableViewCell.m */,
+				B41C896515EDDC0300A26B03 /* DrawingViewController.h */,
+				B41C896615EDDC0300A26B03 /* DrawingViewController.m */,
+				B4B983B815ED1FEF00485407 /* DrawingView.h */,
+				B4B983B915ED1FEF00485407 /* DrawingView.m */,
+				B4B983B115EC847900485407 /* MyViewController.h */,
+				B4B983B215EC847900485407 /* MyViewController.m */,
+				B4B983AE15EC7FB900485407 /* MyNavigationControllerViewController.h */,
+				B4B983AF15EC7FB900485407 /* MyNavigationControllerViewController.m */,
+				B41C895115EDD3EA00A26B03 /* images */,
 				B4B9837D15EC6E9500485407 /* Supporting Files */,
 			);
 			path = GromMail;
@@ -168,6 +313,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B427BFA715F2CD2300991195 /* PBXTargetDependency */,
 			);
 			name = GromMail;
 			productName = GromMail;
@@ -208,10 +354,17 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				English,
 			);
 			mainGroup = B4B9836715EC6E9500485407;
 			productRefGroup = B4B9837315EC6E9500485407 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B427BF7F15F2CCC800991195 /* Products */;
+					ProjectRef = B427BF7E15F2CCC800991195 /* MailCore.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B4B9837115EC6E9500485407 /* GromMail */,
@@ -219,6 +372,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B427BF9615F2CCCB00991195 /* MailCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MailCore.framework;
+			remoteRef = B427BF9515F2CCCB00991195 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B427BF9815F2CCCB00991195 /* libmailcore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libmailcore.a;
+			remoteRef = B427BF9715F2CCCB00991195 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B427BF9A15F2CCCB00991195 /* Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Tests.octest;
+			remoteRef = B427BF9915F2CCCB00991195 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B4B9837015EC6E9500485407 /* Resources */ = {
@@ -228,6 +405,14 @@
 				B4B9838115EC6E9500485407 /* InfoPlist.strings in Resources */,
 				B4B9838A15EC6E9500485407 /* MainStoryboard_iPhone.storyboard in Resources */,
 				B4B9838D15EC6E9500485407 /* MainStoryboard_iPad.storyboard in Resources */,
+				B41C895415EDD3EA00A26B03 /* paint-red.tif in Resources */,
+				B41C895515EDD3EA00A26B03 /* paint-white.tif in Resources */,
+				B41C895E15EDD6BB00A26B03 /* paint-black.tif in Resources */,
+				B41C895F15EDD6BB00A26B03 /* paint-blue.tif in Resources */,
+				B41C896115EDD6BB00A26B03 /* paint-brown.tif in Resources */,
+				B41C896215EDD6BB00A26B03 /* paint-green.tif in Resources */,
+				B41C896315EDD6BB00A26B03 /* paint-pink-255-111-207.tif in Resources */,
+				B41C896415EDD6BB00A26B03 /* paint-yellow.tif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +449,16 @@
 			files = (
 				B4B9838315EC6E9500485407 /* main.m in Sources */,
 				B4B9838715EC6E9500485407 /* AppDelegate.m in Sources */,
-				B4B9839015EC6E9500485407 /* ViewController.m in Sources */,
+				B4B983B015EC7FB900485407 /* MyNavigationControllerViewController.m in Sources */,
+				B4B983B315EC847900485407 /* MyViewController.m in Sources */,
+				B4B983BA15ED1FEF00485407 /* DrawingView.m in Sources */,
+				B41C896715EDDC0300A26B03 /* DrawingViewController.m in Sources */,
+				B427B28B15F2A4DE00991195 /* Model.xcdatamodeld in Sources */,
+				B427BFAA15F2D8B800991195 /* User.m in Sources */,
+				B427BFAD15F2D8F400991195 /* Contact.m in Sources */,
+				B427BFB615F2E40A00991195 /* SettingsViewController.m in Sources */,
+				B427BFC115F412D100991195 /* ContactTableViewCell.m in Sources */,
+				B4DBA86115FFAA5C007CCE63 /* EmailAddress.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +473,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B427BFA715F2CD2300991195 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "MailCore iOS";
+			targetProxy = B427BFA615F2CD2300991195 /* PBXContainerItemProxy */;
+		};
 		B4B9839C15EC6E9500485407 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B4B9837115EC6E9500485407 /* GromMail */;
@@ -378,6 +577,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GromMail/GromMail-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../include\"/**";
 				INFOPLIST_FILE = "GromMail/GromMail-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -389,6 +589,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GromMail/GromMail-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../include\"/**";
 				INFOPLIST_FILE = "GromMail/GromMail-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -448,6 +649,7 @@
 				B4B983AA15EC6E9500485407 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4B983AB15EC6E9500485407 /* Build configuration list for PBXNativeTarget "GromMailTests" */ = {
 			isa = XCConfigurationList;
@@ -456,8 +658,22 @@
 				B4B983AD15EC6E9500485407 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B427B28915F2A4DE00991195 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B427B28A15F2A4DE00991195 /* Model.xcdatamodel */,
+			);
+			currentVersion = B427B28A15F2A4DE00991195 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B4B9836915EC6E9500485407 /* Project object */;
 }

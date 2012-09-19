@@ -1,0 +1,20 @@
+//
+//  Contact.m
+//  GromMail
+//
+//  Created by kaon on 9/1/12.
+//  Copyright (c) 2012 Peter Mikelsons. All rights reserved.
+//
+
+#import "Contact.h"
+#import "User.h"
+
+
+@implementation Contact
+
+@dynamic name;
+@dynamic picture;
+@dynamic emailAddressList;
+@dynamic user;
+
+@end

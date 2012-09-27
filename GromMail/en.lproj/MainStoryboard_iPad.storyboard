@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12B19" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="q2I-Be-gHr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="11E53" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="q2I-Be-gHr">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
@@ -85,8 +85,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="b0A-kJ-WPk">
-                                <rect key="frame" x="20" y="49" width="51" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="b0A-kJ-WPk">
+                                <rect key="frame" x="19" y="49" width="51" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -101,8 +101,8 @@
                                     <action selector="updateUserName:" destination="rem-ny-WUS" eventType="editingDidEnd" id="w4j-aU-itP"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="email address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="A23-Qj-di6">
-                                <rect key="frame" x="20" y="88" width="114" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Email Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="A23-Qj-di6">
+                                <rect key="frame" x="20" y="88" width="115" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -136,12 +136,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="984" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView contentMode="scaleToFill" id="u9U-f5-Vee">
-                                                    <rect key="frame" x="20" y="0.0" width="79" height="79"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="zwO-hU-Pdl">
-                                                    <rect key="frame" x="107" y="24" width="405" height="31"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" id="zwO-hU-Pdl">
+                                                    <rect key="frame" x="107" y="28" width="405" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -149,34 +145,51 @@
                                                         <action selector="updateName:" destination="cx3-oQ-ffG" eventType="editingDidEnd" id="yrZ-py-Bpw"/>
                                                     </connections>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="lgz-0P-dfV">
-                                                    <rect key="frame" x="520" y="24" width="413" height="31"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send email to..." minimumFontSize="17" id="lgz-0P-dfV">
+                                                    <rect key="frame" x="520" y="28" width="413" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                     <connections>
                                                         <action selector="updateOutgoingEmail:" destination="cx3-oQ-ffG" eventType="editingDidEnd" id="6Ff-tv-2zu"/>
                                                     </connections>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="qQr-xf-OUJ">
-                                                    <rect key="frame" x="938" y="24" width="29" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                                    <state key="normal">
-                                                        <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ybL-ZH-n6i">
+                                                    <rect key="frame" x="107" y="6" width="51" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Email Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Qr8-IN-aVh">
+                                                    <rect key="frame" x="520" y="6" width="115" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="azE-kt-PBU">
+                                                    <rect key="frame" x="20" y="0.0" width="79" height="79"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="Picture" backgroundImage="contact-placeholder.jpg">
+                                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <state key="highlighted">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="changePicture:" destination="cx3-oQ-ffG" eventType="touchUpInside" id="zKo-zd-zhe"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <outlet property="image" destination="u9U-f5-Vee" id="xfQ-wg-kLa"/>
                                             <outlet property="nameTextField" destination="zwO-hU-Pdl" id="AYL-A4-kcN"/>
                                             <outlet property="outgoingEmailTextField" destination="lgz-0P-dfV" id="rBl-DU-4gz"/>
+                                            <outlet property="pictureButton" destination="azE-kt-PBU" id="8j5-zP-ifC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -381,14 +394,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="paint-black.tif" width="128" height="128"/>
-        <image name="paint-blue.tif" width="128" height="128"/>
-        <image name="paint-brown.tif" width="128" height="128"/>
-        <image name="paint-green.tif" width="128" height="128"/>
-        <image name="paint-pink-255-111-207.tif" width="128" height="128"/>
-        <image name="paint-red.tif" width="128" height="128"/>
-        <image name="paint-white.tif" width="128" height="128"/>
-        <image name="paint-yellow.tif" width="128" height="128"/>
+        <image name="contact-placeholder.jpg" width="250" height="230"/>
+        <image name="paint-black.tif" width="247" height="254"/>
+        <image name="paint-blue.tif" width="247" height="254"/>
+        <image name="paint-brown.tif" width="247" height="254"/>
+        <image name="paint-green.tif" width="247" height="254"/>
+        <image name="paint-pink-255-111-207.tif" width="247" height="254"/>
+        <image name="paint-red.tif" width="247" height="254"/>
+        <image name="paint-white.tif" width="247" height="254"/>
+        <image name="paint-yellow.tif" width="247" height="254"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>

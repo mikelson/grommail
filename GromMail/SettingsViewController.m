@@ -93,6 +93,9 @@
 
 #pragma mark IBAction
 
+- (IBAction)changePicture:(UIButton *)sender {
+}
+
 - (IBAction)updateUserName:(UITextField *)sender {
     self.user.name = sender.text;
 }
@@ -102,12 +105,10 @@
 }
 
 - (IBAction)addWhitelist {
-    Contact* contact = [NSEntityDescription insertNewObjectForEntityForName:@"Contact"
-                                                     inManagedObjectContext:[AppDelegate sharedManagedObjectContext]];
-    // Does not work, see http://stackoverflow.com/questions/7385439/exception-thrown-in-nsorderedset-generated-accessors
-    //[self.user addWhiteListObject:contact];
-    contact.user = self.user;
-    [self.whiteListTableView setNeedsDisplay];
+    // Make index in last row.
+    NSIndexPath* indexPath = [NSIndexPath indexPathForRow:[self.user.whiteList count] inSection:0];
+    // Add item in last row
+    [self tableView:self.whiteListTableView commitEditingStyle:UITableViewCellEditingStyleInsert forRowAtIndexPath:indexPath];
 }
 
 #pragma mark UITableViewDataSource
@@ -117,7 +118,9 @@
     static NSString *CellIdentifier = @"ContactCell";
     ContactTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    // Configure the cell... get the contact from the white list and assign it to the cell.
+    // Configure the cell...
+    cell.viewController = self;
+    // Get the contact from the white list and assign it to the cell.
     NSUInteger index = indexPath.row;
     Contact* contact = [self.user.whiteList objectAtIndex:index];
     cell.contact = contact;
@@ -130,4 +133,40 @@
     return self.user.whiteList.count;
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Ordered set accessors are buggy, see http://stackoverflow.com/questions/7385439/exception-thrown-in-nsorderedset-generated-accessors
+    // Workaround: copy the list, make a change, and overwrite the old list.
+    NSMutableOrderedSet* newSet;
+    Contact* contact;
+    switch (editingStyle) {
+        case UITableViewCellEditingStyleDelete:
+            newSet = [[NSMutableOrderedSet alloc] initWithOrderedSet:self.user.whiteList];
+            [newSet removeObjectAtIndex:indexPath.row];
+            [self.user setWhiteList:newSet];
+            [self.whiteListTableView reloadData];
+            break;
+        case UITableViewCellEditingStyleInsert:
+            newSet = [[NSMutableOrderedSet alloc] initWithOrderedSet:self.user.whiteList];
+            // Make a new Contact
+            contact = [NSEntityDescription insertNewObjectForEntityForName:@"Contact"inManagedObjectContext:[AppDelegate sharedManagedObjectContext]];
+            [newSet insertObject:contact atIndex:indexPath.row];
+            [self.user setWhiteList:newSet];
+            [self.whiteListTableView reloadData];
+            break;
+        case UITableViewCellEditingStyleNone:
+            // do nothing
+            break;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+{
+    // Ordered set accessors are buggy, see http://stackoverflow.com/questions/7385439/exception-thrown-in-nsorderedset-generated-accessors
+    // Workaround: copy the list, make a change, and overwrite the old list.
+    NSMutableOrderedSet* newSet = [[NSMutableOrderedSet alloc] initWithOrderedSet:self.user.whiteList];
+    NSIndexSet* fromIndexSet = [NSIndexSet indexSetWithIndex:fromIndexPath.row];
+    [newSet moveObjectsAtIndexes:fromIndexSet toIndex:toIndexPath.row];
+    [self.user setWhiteList:newSet];
+}
 @end

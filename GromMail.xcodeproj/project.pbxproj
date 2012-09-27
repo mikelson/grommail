@@ -13,14 +13,6 @@
 		6DEE02BF160A564300A36469 /* libsasl2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DEE02BE160A564300A36469 /* libsasl2.a */; };
 		6DEE02C1160A565100A36469 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DEE02C0160A565100A36469 /* libcrypto.a */; };
 		6DEE02C2160A565F00A36469 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B427B91415F2CBC700991195 /* libiconv.dylib */; };
-		B41C895415EDD3EA00A26B03 /* paint-red.tif in Resources */ = {isa = PBXBuildFile; fileRef = B41C895215EDD3EA00A26B03 /* paint-red.tif */; };
-		B41C895515EDD3EA00A26B03 /* paint-white.tif in Resources */ = {isa = PBXBuildFile; fileRef = B41C895315EDD3EA00A26B03 /* paint-white.tif */; };
-		B41C895E15EDD6BB00A26B03 /* paint-black.tif in Resources */ = {isa = PBXBuildFile; fileRef = B41C895715EDD6BB00A26B03 /* paint-black.tif */; };
-		B41C895F15EDD6BB00A26B03 /* paint-blue.tif in Resources */ = {isa = PBXBuildFile; fileRef = B41C895815EDD6BB00A26B03 /* paint-blue.tif */; };
-		B41C896115EDD6BB00A26B03 /* paint-brown.tif in Resources */ = {isa = PBXBuildFile; fileRef = B41C895A15EDD6BB00A26B03 /* paint-brown.tif */; };
-		B41C896215EDD6BB00A26B03 /* paint-green.tif in Resources */ = {isa = PBXBuildFile; fileRef = B41C895B15EDD6BB00A26B03 /* paint-green.tif */; };
-		B41C896315EDD6BB00A26B03 /* paint-pink-255-111-207.tif in Resources */ = {isa = PBXBuildFile; fileRef = B41C895C15EDD6BB00A26B03 /* paint-pink-255-111-207.tif */; };
-		B41C896415EDD6BB00A26B03 /* paint-yellow.tif in Resources */ = {isa = PBXBuildFile; fileRef = B41C895D15EDD6BB00A26B03 /* paint-yellow.tif */; };
 		B41C896715EDDC0300A26B03 /* DrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B41C896615EDDC0300A26B03 /* DrawingViewController.m */; };
 		B427B28B15F2A4DE00991195 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B427B28915F2A4DE00991195 /* Model.xcdatamodeld */; };
 		B427B91315F2CB9100991195 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B427B91215F2CB9100991195 /* CFNetwork.framework */; };
@@ -93,14 +85,6 @@
 		6DEE02BC160A563900A36469 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../MailCore/iOSPorts/ports/security/openssl/build/Release-iphoneos/libssl.a"; sourceTree = "<group>"; };
 		6DEE02BE160A564300A36469 /* libsasl2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsasl2.a; path = "../MailCore/iOSPorts/ports/security/cyrus-sasl/build/Release-iphoneos/libsasl2.a"; sourceTree = "<group>"; };
 		6DEE02C0160A565100A36469 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../MailCore/iOSPorts/ports/security/openssl/build/Release-iphoneos/libcrypto.a"; sourceTree = "<group>"; };
-		B41C895215EDD3EA00A26B03 /* paint-red.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "paint-red.tif"; sourceTree = "<group>"; };
-		B41C895315EDD3EA00A26B03 /* paint-white.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "paint-white.tif"; sourceTree = "<group>"; };
-		B41C895715EDD6BB00A26B03 /* paint-black.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "paint-black.tif"; sourceTree = "<group>"; };
-		B41C895815EDD6BB00A26B03 /* paint-blue.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "paint-blue.tif"; sourceTree = "<group>"; };
-		B41C895A15EDD6BB00A26B03 /* paint-brown.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "paint-brown.tif"; sourceTree = "<group>"; };
-		B41C895B15EDD6BB00A26B03 /* paint-green.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "paint-green.tif"; sourceTree = "<group>"; };
-		B41C895C15EDD6BB00A26B03 /* paint-pink-255-111-207.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "paint-pink-255-111-207.tif"; sourceTree = "<group>"; };
-		B41C895D15EDD6BB00A26B03 /* paint-yellow.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "paint-yellow.tif"; sourceTree = "<group>"; };
 		B41C896515EDDC0300A26B03 /* DrawingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingViewController.h; sourceTree = "<group>"; };
 		B41C896615EDDC0300A26B03 /* DrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingViewController.m; sourceTree = "<group>"; };
 		B427B28A15F2A4DE00991195 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -193,14 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				6DACA0701613782F001C7E6C /* contact-placeholder.jpg */,
-				B41C895715EDD6BB00A26B03 /* paint-black.tif */,
-				B41C895815EDD6BB00A26B03 /* paint-blue.tif */,
-				B41C895A15EDD6BB00A26B03 /* paint-brown.tif */,
-				B41C895B15EDD6BB00A26B03 /* paint-green.tif */,
-				B41C895C15EDD6BB00A26B03 /* paint-pink-255-111-207.tif */,
-				B41C895D15EDD6BB00A26B03 /* paint-yellow.tif */,
-				B41C895215EDD3EA00A26B03 /* paint-red.tif */,
-				B41C895315EDD3EA00A26B03 /* paint-white.tif */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -414,14 +390,6 @@
 				B4B9838115EC6E9500485407 /* InfoPlist.strings in Resources */,
 				B4B9838A15EC6E9500485407 /* MainStoryboard_iPhone.storyboard in Resources */,
 				B4B9838D15EC6E9500485407 /* MainStoryboard_iPad.storyboard in Resources */,
-				B41C895415EDD3EA00A26B03 /* paint-red.tif in Resources */,
-				B41C895515EDD3EA00A26B03 /* paint-white.tif in Resources */,
-				B41C895E15EDD6BB00A26B03 /* paint-black.tif in Resources */,
-				B41C895F15EDD6BB00A26B03 /* paint-blue.tif in Resources */,
-				B41C896115EDD6BB00A26B03 /* paint-brown.tif in Resources */,
-				B41C896215EDD6BB00A26B03 /* paint-green.tif in Resources */,
-				B41C896315EDD6BB00A26B03 /* paint-pink-255-111-207.tif in Resources */,
-				B41C896415EDD6BB00A26B03 /* paint-yellow.tif in Resources */,
 				6DACA0711613782F001C7E6C /* contact-placeholder.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

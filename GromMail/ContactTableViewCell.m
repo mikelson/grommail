@@ -43,6 +43,14 @@
     EmailAddress* email = [contact.emailAddressList firstObject];
     [self.outgoingEmailTextField setText:email.value];
     UIImage* image = [UIImage imageWithData:contact.picture];
+    if (!image) {
+        [pictureButton setTitle:@"add photo" forState:UIControlStateNormal];
+        NSBundle* bundle = [NSBundle mainBundle];
+        NSString* path = [bundle pathForResource:@"contact-placeholder" ofType:@"jpg"];
+        image = [UIImage imageWithContentsOfFile:path];
+    } else {
+        [pictureButton setTitle:nil forState:UIControlStateNormal];
+    }
     [pictureButton setBackgroundImage:image forState:UIControlStateNormal];
     
     // Assume that model won't change from anything else, so don't register as Key-Value Observer...

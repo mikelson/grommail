@@ -85,6 +85,7 @@
 {
     NSMutableSet* paths;
     UIImage* image;
+    UIImage* imageBeforeErase;
 }
 
 @end
@@ -98,6 +99,7 @@
     if (self) {
         // Initialization code
         paths = [[NSMutableSet alloc] init];
+        imageBeforeErase = nil;
         
         // Try to read image from file.
         NSString *pngPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/GromMail-drawing.png"];
@@ -210,11 +212,24 @@
 
 - (void)erase
 {
-    BOOL needsDisplay = image || [paths count];
-    image = nil;
-    [paths makeObjectsPerformSelector:@selector(removeAllPointsBeforeCurrent)];
-    if (needsDisplay) {
+    if (image || paths.count) {
+        // There is something showing... save it, in case user changes her mind.
+        
+        // This will not flush current touches to image.
+        // If user is drawing while erase button is clicked, continued drawing will negate this simple undo feature anyway.
+        [self saveViewToImage];
+        imageBeforeErase = image;
+        
+        // Now erase it.
+        image = nil;
+        [paths makeObjectsPerformSelector:@selector(removeAllPointsBeforeCurrent)];
         [self setNeedsDisplay];
+    } else {
+        // Nothing has been drawn... flip back to saved image, if anything.
+        image = imageBeforeErase;
+        if (image) {
+            [self setNeedsDisplay];
+        }
     }
 }
 @end

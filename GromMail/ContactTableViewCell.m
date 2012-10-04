@@ -89,6 +89,7 @@
     UIImagePickerController* picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    picker.allowsEditing = YES;
     // default picker.mediaTypes of kUTTypeImage is fine
     
     // Present the user interface.
@@ -102,7 +103,7 @@
         CGRect rect = sender.frame;
         UIView* view = sender.superview;
         [self.popover presentPopoverFromRect:rect inView:view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
-    } else{
+    } else {
         // "On iPhone or iPod touch, do this modally (full-screen) by calling the presentViewController:animated:completion: method of the currently active view controller, passing your configured image picker controller as the new view controller."
         [self.viewController presentModalViewController:picker animated:YES];
     }
@@ -127,13 +128,19 @@
     // Assign data to model
     self.contact.picture = UIImagePNGRepresentation(image);
     
-    // Dismiss the picker
-    [picker removeFromParentViewController];
-    self.popover = nil;
+    [self imagePickerControllerDidCancel:picker];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-    //self.popover = nil;
+    // Dismiss the picker
+    [picker removeFromParentViewController];
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        [self.popover dismissPopoverAnimated:YES];
+        self.popover = nil;
+    } else {
+        [self.viewController dismissModalViewControllerAnimated:YES];
+    }
 }
 @end

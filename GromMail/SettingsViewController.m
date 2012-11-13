@@ -88,7 +88,11 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
+}
+
+- (NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskLandscape;
 }
 
 #pragma mark IBAction
@@ -120,6 +124,8 @@
     
     // Configure the cell...
     cell.viewController = self;
+    UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:cell action:@selector(changePicture:)];
+    [cell.pictureView addGestureRecognizer:tap];
     // Get the contact from the white list and assign it to the cell.
     NSUInteger index = indexPath.row;
     Contact* contact = [self.user.whiteList objectAtIndex:index];

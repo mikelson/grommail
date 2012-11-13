@@ -10,6 +10,10 @@
 
 @implementation AppDelegate
 
+// Workaround from http://stackoverflow.com/questions/12522491/crash-on-presenting-uiimagepickercontroller-under-ios6/12575058#12575058
+- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
+    return UIInterfaceOrientationMaskAll;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

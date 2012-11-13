@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="11G56" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="q2I-Be-gHr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="q2I-Be-gHr">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--My Navigation Controller View Controller-->
         <scene sceneID="csg-YT-Yoc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1zN-g9-pa6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="q2I-Be-gHr" customClass="MyNavigationControllerViewController" sceneMemberID="viewController">
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="M5p-yc-JL8">
@@ -18,13 +17,13 @@
                         <segue destination="Xqb-wz-lgc" kind="relationship" relationship="rootViewController" id="v8e-IW-XxE"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1zN-g9-pa6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-488" y="-426"/>
         </scene>
         <!--My View Controller - Welcome-->
         <scene sceneID="wXc-Ir-Q3n">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1IX-4t-eTe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Xqb-wz-lgc" customClass="MyViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fiC-zJ-FsO">
                         <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
@@ -66,13 +65,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="Uww-b3-OQz"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1IX-4t-eTe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="670" y="-418"/>
         </scene>
         <!--Settings View Controller - Settings-->
         <scene sceneID="9PY-8s-LR7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D55-J4-e5f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="rem-ny-WUS" customClass="SettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D3S-7m-fyp">
                         <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
@@ -168,28 +167,18 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="azE-kt-PBU">
-                                                    <rect key="frame" x="20" y="0.0" width="79" height="79"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <state key="normal" title="Picture" backgroundImage="contact-placeholder.jpg">
-                                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <state key="highlighted">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="changePicture:" destination="cx3-oQ-ffG" eventType="touchUpInside" id="zKo-zd-zhe"/>
-                                                    </connections>
-                                                </button>
+                                                <imageView contentMode="scaleAspectFit" image="contact-placeholder.jpg" id="ykn-7p-O3r">
+                                                    <rect key="frame" x="8" y="0.0" width="80" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                                                    <gestureRecognizers/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
                                             <outlet property="nameTextField" destination="zwO-hU-Pdl" id="AYL-A4-kcN"/>
                                             <outlet property="outgoingEmailTextField" destination="lgz-0P-dfV" id="rBl-DU-4gz"/>
-                                            <outlet property="pictureButton" destination="azE-kt-PBU" id="8j5-zP-ifC"/>
+                                            <outlet property="pictureView" destination="ykn-7p-O3r" id="5Rg-hZ-WsC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -226,13 +215,13 @@
                         <outlet property="whiteListTableView" destination="HqL-LL-RCX" id="ehx-5r-gea"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D55-J4-e5f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1971" y="-1249"/>
+            <point key="canvasLocation" x="1951" y="-1225"/>
         </scene>
         <!--Drawing View Controller - Compose-->
         <scene sceneID="zzN-nc-vmX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YXJ-c8-vNm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="UpO-yj-n4F" customClass="DrawingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VbV-15-pkv">
                         <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
@@ -389,6 +378,7 @@
                         <outlet property="drawingView" destination="S78-ud-L5K" id="kfn-A0-EMW"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YXJ-c8-vNm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1987" y="58"/>
         </scene>

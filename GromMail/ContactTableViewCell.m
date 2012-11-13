@@ -12,10 +12,14 @@
 #import "AppDelegate.h"
 #import "SettingsViewController.h"
 
+@interface ContactTableViewCell ()
+- (void)changePicture:(UIGestureRecognizer *)sender;
+@end
+
 @implementation ContactTableViewCell
 @synthesize nameTextField;
 @synthesize outgoingEmailTextField;
-@synthesize pictureButton;
+@synthesize pictureView;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -33,6 +37,19 @@
     // Configure the view for the selected state
 }
 
+- (void)setButtonImage:(UIImage*)image
+{
+    if (image) {
+        //[pictureButton setTitle:nil forState:UIControlStateNormal];
+    } else {
+        //[pictureButton setTitle:@"add photo" forState:UIControlStateNormal];
+        NSBundle* bundle = [NSBundle mainBundle];
+        NSString* path = [bundle pathForResource:@"contact-placeholder" ofType:@"jpg"];
+        image = [UIImage imageWithContentsOfFile:path];
+    }
+    pictureView.image = image;
+}
+
 - (void)setContact:(Contact *)contact
 {
     // Update model used by this cell.
@@ -42,16 +59,7 @@
     [self.nameTextField setText:contact.name];
     EmailAddress* email = [contact.emailAddressList firstObject];
     [self.outgoingEmailTextField setText:email.value];
-    UIImage* image = [UIImage imageWithData:contact.picture];
-    if (!image) {
-        [pictureButton setTitle:@"add photo" forState:UIControlStateNormal];
-        NSBundle* bundle = [NSBundle mainBundle];
-        NSString* path = [bundle pathForResource:@"contact-placeholder" ofType:@"jpg"];
-        image = [UIImage imageWithContentsOfFile:path];
-    } else {
-        [pictureButton setTitle:nil forState:UIControlStateNormal];
-    }
-    [pictureButton setBackgroundImage:image forState:UIControlStateNormal];
+    [self setButtonImage:[UIImage imageWithData:contact.picture]];
     
     // Assume that model won't change from anything else, so don't register as Key-Value Observer...
 }
@@ -81,7 +89,7 @@
     self.contact.name = name;
 }
 
-- (IBAction)changePicture:(UIButton *)sender {
+- (void)changePicture:(UIGestureRecognizer *)sender {
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
         NSLog(@"photo library not available!");
         return;
@@ -100,8 +108,8 @@
         self.popover = [[UIPopoverController alloc] initWithContentViewController:picker];
         self.popover.delegate = self;
         
-        CGRect rect = sender.frame;
-        UIView* view = sender.superview;
+        CGRect rect = sender.view.frame;
+        UIView* view = sender.view.superview;
         [self.popover presentPopoverFromRect:rect inView:view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
     } else {
         // "On iPhone or iPod touch, do this modally (full-screen) by calling the presentViewController:animated:completion: method of the currently active view controller, passing your configured image picker controller as the new view controller."
@@ -120,10 +128,10 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
+    UIImage *image = [info valueForKey:UIImagePickerControllerEditedImage];
     
     // Assign image to view
-    [pictureButton setBackgroundImage:image forState:UIControlStateNormal];
+    [self setButtonImage:image];
     
     // Assign data to model
     self.contact.picture = UIImagePNGRepresentation(image);
@@ -143,4 +151,5 @@
         [self.viewController dismissModalViewControllerAnimated:YES];
     }
 }
+
 @end

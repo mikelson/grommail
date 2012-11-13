@@ -15,10 +15,10 @@
 @property (strong, nonatomic) Contact *contact;
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *outgoingEmailTextField;
-@property (weak, nonatomic) IBOutlet UIButton *pictureButton;
+@property (weak, nonatomic) IBOutlet UIImageView *pictureView;
 @property (strong, nonatomic) UIPopoverController* popover;
 @property (weak, nonatomic) SettingsViewController *viewController;
 - (IBAction)updateOutgoingEmail:(id)sender;
 - (IBAction)updateName:(id)sender;
-- (IBAction)changePicture:(UIButton *)sender;
+- (void)changePicture:(UIGestureRecognizer *)sender;
 @end

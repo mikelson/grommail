@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "User.h"
 
 @implementation AppDelegate
 
@@ -138,4 +139,23 @@
     
     return _persistentStoreCoordinator;
 }
+
++ (User*)getUser
+{
+    // Get the user
+    NSManagedObjectContext *context = [AppDelegate sharedManagedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    
+    NSAssert1(fetchedObjects.count < 2, @"Expected 0 or 1 users, got @d", fetchedObjects.count);
+    if (fetchedObjects.count) {
+        return [fetchedObjects objectAtIndex:0];
+    } else {
+        return [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
+    }
+}
+
 @end

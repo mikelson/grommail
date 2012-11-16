@@ -29,7 +29,7 @@
 		B427BFB315F2DC3C00991195 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B427BFB215F2DC3C00991195 /* CoreData.framework */; };
 		B427BFB615F2E40A00991195 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B427BFB515F2E40A00991195 /* SettingsViewController.m */; };
 		B427BFB815F2E7DD00991195 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B427BFB715F2E7DD00991195 /* CoreData.framework */; };
-		B427BFC115F412D100991195 /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B427BFC015F412D100991195 /* ContactTableViewCell.m */; };
+		B427BFC115F412D100991195 /* EditableContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B427BFC015F412D100991195 /* EditableContactTableViewCell.m */; };
 		B4B9837715EC6E9500485407 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B9837615EC6E9500485407 /* UIKit.framework */; };
 		B4B9837915EC6E9500485407 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B9837815EC6E9500485407 /* Foundation.framework */; };
 		B4B9837B15EC6E9500485407 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B9837A15EC6E9500485407 /* CoreGraphics.framework */; };
@@ -47,6 +47,10 @@
 		B4B983B315EC847900485407 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B983B215EC847900485407 /* MyViewController.m */; };
 		B4B983BA15ED1FEF00485407 /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B983B915ED1FEF00485407 /* DrawingView.m */; };
 		B4DBA86115FFAA5C007CCE63 /* EmailAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DBA86015FFAA5C007CCE63 /* EmailAddress.m */; };
+		C80337CC1653304F0014E7B6 /* ConvoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C80337CB1653304F0014E7B6 /* ConvoTableViewCell.m */; };
+		C80337CF165331A20014E7B6 /* ConvosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C80337CE165331A20014E7B6 /* ConvosTableViewController.m */; };
+		C80337D216540EC60014E7B6 /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C80337D116540EC60014E7B6 /* ContactTableViewCell.m */; };
+		C809412D1655CF31005243F0 /* compose-pen.png in Resources */ = {isa = PBXBuildFile; fileRef = C809412C1655CF31005243F0 /* compose-pen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,8 +121,8 @@
 		B427BFB415F2E40A00991195 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		B427BFB515F2E40A00991195 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		B427BFB715F2E7DD00991195 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		B427BFBF15F412D000991195 /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewCell.h; sourceTree = "<group>"; };
-		B427BFC015F412D100991195 /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewCell.m; sourceTree = "<group>"; };
+		B427BFBF15F412D000991195 /* EditableContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableContactTableViewCell.h; sourceTree = "<group>"; };
+		B427BFC015F412D100991195 /* EditableContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableContactTableViewCell.m; sourceTree = "<group>"; };
 		B4B9837215EC6E9500485407 /* GromMail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GromMail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B9837615EC6E9500485407 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B4B9837815EC6E9500485407 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -145,6 +149,13 @@
 		B4B983B915ED1FEF00485407 /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
 		B4DBA85F15FFAA5C007CCE63 /* EmailAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailAddress.h; sourceTree = "<group>"; };
 		B4DBA86015FFAA5C007CCE63 /* EmailAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailAddress.m; sourceTree = "<group>"; };
+		C80337CA1653304F0014E7B6 /* ConvoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvoTableViewCell.h; sourceTree = "<group>"; };
+		C80337CB1653304F0014E7B6 /* ConvoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConvoTableViewCell.m; sourceTree = "<group>"; };
+		C80337CD165331A20014E7B6 /* ConvosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvosTableViewController.h; sourceTree = "<group>"; };
+		C80337CE165331A20014E7B6 /* ConvosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConvosTableViewController.m; sourceTree = "<group>"; };
+		C80337D016540EC60014E7B6 /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewCell.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
+		C80337D116540EC60014E7B6 /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewCell.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
+		C809412C1655CF31005243F0 /* compose-pen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose-pen.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +203,7 @@
 		B41C895115EDD3EA00A26B03 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C809412C1655CF31005243F0 /* compose-pen.png */,
 				6DC6343E1613E08000EB6772 /* paint-black.tif */,
 				6DC6343F1613E08000EB6772 /* paint-blue.tif */,
 				6DC634401613E08000EB6772 /* paint-brown.tif */,
@@ -260,10 +272,16 @@
 				B4B9838615EC6E9500485407 /* AppDelegate.m */,
 				B4B9838815EC6E9500485407 /* MainStoryboard_iPhone.storyboard */,
 				B4B9838B15EC6E9500485407 /* MainStoryboard_iPad.storyboard */,
+				C80337CA1653304F0014E7B6 /* ConvoTableViewCell.h */,
+				C80337CB1653304F0014E7B6 /* ConvoTableViewCell.m */,
+				C80337CD165331A20014E7B6 /* ConvosTableViewController.h */,
+				C80337CE165331A20014E7B6 /* ConvosTableViewController.m */,
 				B427BFB415F2E40A00991195 /* SettingsViewController.h */,
 				B427BFB515F2E40A00991195 /* SettingsViewController.m */,
-				B427BFBF15F412D000991195 /* ContactTableViewCell.h */,
-				B427BFC015F412D100991195 /* ContactTableViewCell.m */,
+				C80337D016540EC60014E7B6 /* ContactTableViewCell.h */,
+				C80337D116540EC60014E7B6 /* ContactTableViewCell.m */,
+				B427BFBF15F412D000991195 /* EditableContactTableViewCell.h */,
+				B427BFC015F412D100991195 /* EditableContactTableViewCell.m */,
 				B41C896515EDDC0300A26B03 /* DrawingViewController.h */,
 				B41C896615EDDC0300A26B03 /* DrawingViewController.m */,
 				B4B983B815ED1FEF00485407 /* DrawingView.h */,
@@ -423,6 +441,7 @@
 				6DC6344B1613E08000EB6772 /* paint-red.tif in Resources */,
 				6DC6344C1613E08000EB6772 /* paint-white.tif in Resources */,
 				6DC6344D1613E08000EB6772 /* paint-yellow.tif in Resources */,
+				C809412D1655CF31005243F0 /* compose-pen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,8 +486,11 @@
 				B427BFAA15F2D8B800991195 /* User.m in Sources */,
 				B427BFAD15F2D8F400991195 /* Contact.m in Sources */,
 				B427BFB615F2E40A00991195 /* SettingsViewController.m in Sources */,
-				B427BFC115F412D100991195 /* ContactTableViewCell.m in Sources */,
+				B427BFC115F412D100991195 /* EditableContactTableViewCell.m in Sources */,
 				B4DBA86115FFAA5C007CCE63 /* EmailAddress.m in Sources */,
+				C80337CC1653304F0014E7B6 /* ConvoTableViewCell.m in Sources */,
+				C80337CF165331A20014E7B6 /* ConvosTableViewController.m in Sources */,
+				C80337D216540EC60014E7B6 /* ContactTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 Peter Mikelsons. All rights reserved.
 //
 
+@class User;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
@@ -15,4 +17,6 @@
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 + (NSManagedObjectContext*)sharedManagedObjectContext;
+
++ (User*)getUser;
 @end

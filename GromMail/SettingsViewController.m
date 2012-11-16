@@ -10,7 +10,7 @@
 #import "User.h"
 #import "Contact.h"
 #import "AppDelegate.h"
-#import "ContactTableViewCell.h"
+#import "EditableContactTableViewCell.h"
 
 @interface SettingsViewController ()
 
@@ -51,20 +51,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    // Get the user
-    NSManagedObjectContext *context = [AppDelegate sharedManagedObjectContext];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:context];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    [fetchRequest setEntity:entity];
-    NSError *error;
-    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-    
-    NSAssert1(fetchedObjects.count < 2, @"Expected 0 or 1 users, got @d", fetchedObjects.count);
-    if (fetchedObjects.count) {
-        self.user = [fetchedObjects objectAtIndex:0];
-    } else {
-        self.user = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
-    }
+    self.user = [AppDelegate getUser];
     
     [self.userNameTextField setText:self.user.name];
     [self.userEmailTextField setText:self.user.emailAddress];
@@ -97,9 +84,6 @@
 
 #pragma mark IBAction
 
-- (IBAction)changePicture:(UIButton *)sender {
-}
-
 - (IBAction)updateUserName:(UITextField *)sender {
     self.user.name = sender.text;
 }
@@ -120,7 +104,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"ContactCell";
-    ContactTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    EditableContactTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
     cell.viewController = self;

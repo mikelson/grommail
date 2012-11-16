@@ -1,24 +1,20 @@
 //
 //  ContactTableViewCell.h
-//  GromMail
+//  
 //
-//  Created by kaon on 9/2/12.
-//  Copyright (c) 2012 Peter Mikelsons. All rights reserved.
+//  Created by Peter Mikelsons on 11/14/12.
+//
 //
 
 #import <UIKit/UIKit.h>
 @class Contact;
-@class SettingsViewController;
 
-@interface ContactTableViewCell : UITableViewCell <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPopoverControllerDelegate>
+@interface ContactTableViewCell : UITableViewCell
 
 @property (strong, nonatomic) Contact *contact;
-@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
-@property (weak, nonatomic) IBOutlet UITextField *outgoingEmailTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *pictureView;
-@property (strong, nonatomic) UIPopoverController* popover;
-@property (weak, nonatomic) SettingsViewController *viewController;
-- (IBAction)updateOutgoingEmail:(id)sender;
-- (IBAction)updateName:(id)sender;
-- (void)changePicture:(UIGestureRecognizer *)sender;
+
+// protected (how?)
+- (void)setButtonImage:(UIImage*)image;
+
 @end

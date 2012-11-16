@@ -8,11 +8,14 @@
 
 #import "DrawingViewController.h"
 #import "DrawingView.h"
+#import "Contact.h"
+
 @interface DrawingViewController ()
 
 @end
 
 @implementation DrawingViewController
+@synthesize contact;
 @synthesize drawingView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -44,8 +47,34 @@
 - (void)viewDidUnload
 {
     [self setDrawingView:nil];
+    [self setContactPictureView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+//    self.user = [AppDelegate getUser];
+    
+    self.contactPictureView.image = [UIImage imageWithData:self.contact.picture];
+    
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    [self setContactPictureView:nil];
+    
+    // Save the user
+//    NSError *error;
+//    if (![[AppDelegate sharedManagedObjectContext] save:&error]) {
+//        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+//    }
+    // Don't need it any more.
+//    self.user = nil;
+    self.contact = nil;
 }
 
 - (IBAction)setColorToNormalTitle:(UIButton *)sender

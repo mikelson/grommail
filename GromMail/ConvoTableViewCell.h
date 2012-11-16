@@ -1,6 +1,8 @@
 //
-//  ConversationTableViewCell.h
+//  ConvoTableViewCell.h
 //  GromMail
+//
+//  "Convo" is abbreviation of "Conversation", in this case an email exchange with a contact.
 //
 //  Created by Peter Mikelsons on 11/13/12.
 //  Copyright (c) 2012 Peter Mikelsons. All rights reserved.

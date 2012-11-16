@@ -1,5 +1,5 @@
 //
-//  ConversationTableViewCell.m
+//  ConvoTableViewCell.m
 //  GromMail
 //
 //  Created by Peter Mikelsons on 11/13/12.

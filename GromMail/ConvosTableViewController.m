@@ -10,6 +10,7 @@
 #import "ConvoTableViewCell.h"
 #import "User.h"
 #import "AppDelegate.h"
+#import "DrawingViewController.h"
 
 @interface ConvosTableViewController ()
 
@@ -19,6 +20,8 @@
 
 @implementation ConvosTableViewController
 @synthesize user;
+
+#pragma mark UIViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -69,6 +72,29 @@
 //    }
     // Don't need it any more.
     self.user = nil;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UIViewController* destination = segue.destinationViewController;
+    if ([destination isKindOfClass:[DrawingViewController class]]) {
+        DrawingViewController* drawing = (DrawingViewController*)destination;
+        
+        // Find superview with a contact. Assume sender was a view...
+        UIView* view = (UIView*)sender;
+        Contact* contact = nil;
+        while (view && !contact) {
+            if ([view isKindOfClass:[ContactTableViewCell class]]) {
+                ContactTableViewCell* contactCell = (ContactTableViewCell*)view;
+                contact = contactCell.contact;
+            }
+            view = view.superview;
+        }
+        
+        
+        // Inform destination DrawingViewController whom to show conversation for.
+        drawing.contact = contact;
+    }
 }
 
 #pragma mark - Table view data source

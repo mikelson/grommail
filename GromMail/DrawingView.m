@@ -84,13 +84,13 @@
 
 {
     NSMutableSet* paths;
-    UIImage* image;
     UIImage* imageBeforeErase;
 }
 
 @end
 
 @implementation DrawingView
+@synthesize image;
 
 // Called when inited by nib, the only way DrawingView gets inited.
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -100,22 +100,8 @@
         // Initialization code
         paths = [[NSMutableSet alloc] init];
         imageBeforeErase = nil;
-        
-        // Try to read image from file.
-        NSString *pngPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/GromMail-drawing.png"];
-        image = [UIImage imageWithContentsOfFile:pngPath];
     }
     return self;
-}
-
-- (void)dealloc
-{
-    [self saveViewToImage];
-    
-    // Save data to a file.
-    NSData* serialization = UIImagePNGRepresentation(image);
-    NSString *pngPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/GromMail-drawing.png"];
-    [serialization writeToFile:pngPath atomically:YES];
 }
 
 // Private utility function - render current view into UIImage back buffer.
@@ -124,7 +110,7 @@
     // Save current in an image
     UIGraphicsBeginImageContext(self.bounds.size);
     [self.layer renderInContext:UIGraphicsGetCurrentContext()];
-    image = UIGraphicsGetImageFromCurrentImageContext();
+    self.image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 }
 
@@ -204,7 +190,7 @@
     UIColor* color = self.colorSource.color;
     [color set];
     // Drawing code
-    [image drawAtPoint:self.bounds.origin];
+    [self.image drawAtPoint:self.bounds.origin];
     for (MyPath* path in paths) {
         [path stroke];
     }
@@ -212,22 +198,22 @@
 
 - (void)erase
 {
-    if (image || paths.count) {
+    if (self.image || paths.count) {
         // There is something showing... save it, in case user changes her mind.
         
         // This will not flush current touches to image.
         // If user is drawing while erase button is clicked, continued drawing will negate this simple undo feature anyway.
         [self saveViewToImage];
-        imageBeforeErase = image;
+        imageBeforeErase = self.image;
         
         // Now erase it.
-        image = nil;
+        self.image = nil;
         [paths makeObjectsPerformSelector:@selector(removeAllPointsBeforeCurrent)];
         [self setNeedsDisplay];
     } else {
         // Nothing has been drawn... flip back to saved image, if anything.
-        image = imageBeforeErase;
-        if (image) {
+        self.image = imageBeforeErase;
+        if (self.image) {
             [self setNeedsDisplay];
         }
     }

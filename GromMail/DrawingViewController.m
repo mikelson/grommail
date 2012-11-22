@@ -58,6 +58,9 @@
     
     self.contactPictureView.image = [UIImage imageWithData:self.contact.picture];
     
+    // Try to read draft image from model.
+    self.drawingView.image = [UIImage imageWithData:self.contact.draftImage];
+    
     [super viewWillAppear:animated];
 }
 
@@ -66,6 +69,11 @@
     [super viewDidDisappear:animated];
     
     [self setContactPictureView:nil];
+    
+    // Save draft image data to model.
+    [self.drawingView saveViewToImage];
+    NSData* serialization = UIImagePNGRepresentation(self.drawingView.image);
+    self.contact.draftImage = serialization;
     
     // Save the user
 //    NSError *error;

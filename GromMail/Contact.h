@@ -17,6 +17,7 @@
 @property (nonatomic, retain) NSData * picture;
 @property (nonatomic, retain) NSOrderedSet *emailAddressList;
 @property (nonatomic, retain) User *user;
+@property (nonatomic, retain) NSData * draftImage;
 @end
 
 @interface Contact (CoreDataGeneratedAccessors)

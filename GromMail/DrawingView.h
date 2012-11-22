@@ -11,7 +11,10 @@
 
 @interface DrawingView : UIView
 
+- (void)saveViewToImage;
 - (void)erase;
+
+@property (strong, nonatomic) UIImage* image;
 
 // To dealloc DrawingView when it gets hidden, using ARC,
 // "make the parent-to-child relationship strong and the child-to-parent relationship weak".

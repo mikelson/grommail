@@ -7,6 +7,7 @@
 //
 
 #import "ContactTableViewCell.h"
+#import "ContactPictureButton.h"
 
 @implementation ContactTableViewCell
 @synthesize pictureView;

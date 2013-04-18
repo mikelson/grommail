@@ -9,6 +9,7 @@
 #import "DrawingViewController.h"
 #import "DrawingView.h"
 #import "Contact.h"
+#import "ContactPictureButton.h"
 
 @interface DrawingViewController ()
 

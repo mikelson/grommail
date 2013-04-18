@@ -38,7 +38,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="319"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="aX0-N0-YKx">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="aX0-N0-YKx" customClass="ContactPictureButton">
                                             <rect key="frame" x="9" y="0.0" width="320" height="320"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -210,7 +210,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <imageView contentMode="scaleAspectFit" image="contact-placeholder.jpg" id="ykn-7p-O3r">
+                                                <imageView contentMode="scaleAspectFit" image="contact-placeholder.jpg" id="ykn-7p-O3r" customClass="ContactPictureButton">
                                                     <rect key="frame" x="8" y="0.0" width="80" height="80"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                                     <gestureRecognizers/>
@@ -421,7 +421,7 @@
                                     <action selector="setColorToNormalTitle:" destination="UpO-yj-n4F" eventType="touchUpInside" id="oZu-X9-P6W"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="contact-placeholder.jpg" id="tuq-lw-yYy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="contact-placeholder.jpg" id="tuq-lw-yYy" customClass="ContactPictureButton">
                                 <rect key="frame" x="156" y="564" width="128" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -452,6 +452,64 @@
         <image name="paint-white.tif" width="128" height="128"/>
         <image name="paint-yellow.tif" width="128" height="128"/>
     </resources>
+    <classes>
+        <class className="ContactPictureButton" superclassName="UIImageView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContactPictureButton.h"/>
+        </class>
+        <class className="ContactTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContactTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="pictureView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="ConvoTableViewCell" superclassName="ContactTableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ConvoTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ConvosTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ConvosTableViewController.h"/>
+        </class>
+        <class className="DrawingView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrawingView.h"/>
+        </class>
+        <class className="DrawingViewController" superclassName="MyViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrawingViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="eraseDrawing"/>
+                <relationship kind="action" name="setColorToNormalTitle:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="contactPictureView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="drawingView" candidateClass="DrawingView"/>
+            </relationships>
+        </class>
+        <class className="EditableContactTableViewCell" superclassName="ContactTableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditableContactTableViewCell.h"/>
+            <relationships>
+                <relationship kind="action" name="updateName:"/>
+                <relationship kind="action" name="updateOutgoingEmail:"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="outgoingEmailTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="MyNavigationControllerViewController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyNavigationControllerViewController.h"/>
+        </class>
+        <class className="MyViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyViewController.h"/>
+        </class>
+        <class className="SettingsViewController" superclassName="MyViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addWhitelist"/>
+                <relationship kind="action" name="updateUserEmail:" candidateClass="UITextField"/>
+                <relationship kind="action" name="updateUserName:" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="userEmailTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="userNameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="whiteListTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

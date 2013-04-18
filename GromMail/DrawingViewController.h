@@ -9,6 +9,7 @@
 #import "MyViewController.h"
 
 @class DrawingView;
+@class ContactPictureButton;
 @class Contact;
 
 @protocol Colored <NSObject>
@@ -21,7 +22,7 @@
 
 @property (readonly) UIColor* color;
 
-@property (weak, nonatomic) IBOutlet UIImageView *contactPictureView;
+@property (weak, nonatomic) IBOutlet ContactPictureButton *contactPictureView;
 @property IBOutlet DrawingView *drawingView;
 
 - (IBAction)setColorToNormalTitle:(UIButton *)sender;

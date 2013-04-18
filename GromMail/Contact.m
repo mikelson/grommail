@@ -14,6 +14,7 @@
 
 @dynamic name;
 @dynamic picture;
+@dynamic draftImage;
 @dynamic emailAddressList;
 @dynamic user;
 

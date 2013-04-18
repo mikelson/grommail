@@ -129,10 +129,7 @@
     ConvoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ConvoCell" forIndexPath:indexPath];
     
     // Configure the cell...
-//    cell.viewController = self;
-//    UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:cell action:@selector(changePicture:)];
-//    [cell.pictureView addGestureRecognizer:tap];
-//    // Get the contact from the white list and assign it to the cell.
+    // Get the contact from the white list and assign it to the cell.
     NSUInteger index = indexPath.row;
     Contact* contact = [self.user.whiteList objectAtIndex:index];
     cell.contact = contact;

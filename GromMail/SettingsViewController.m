@@ -11,6 +11,7 @@
 #import "Contact.h"
 #import "AppDelegate.h"
 #import "EditableContactTableViewCell.h"
+#import "ContactPictureButton.h"
 
 @interface SettingsViewController ()
 
@@ -108,8 +109,7 @@
     
     // Configure the cell...
     cell.viewController = self;
-    UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:cell action:@selector(changePicture:)];
-    [cell.pictureView addGestureRecognizer:tap];
+    [cell.pictureView setTapTarget:cell action:@selector(changePicture:)];
     // Get the contact from the white list and assign it to the cell.
     NSUInteger index = indexPath.row;
     Contact* contact = [self.user.whiteList objectAtIndex:index];

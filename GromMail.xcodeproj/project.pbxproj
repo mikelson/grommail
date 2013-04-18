@@ -28,7 +28,6 @@
 		B427BFAD15F2D8F400991195 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = B427BFAC15F2D8F400991195 /* Contact.m */; };
 		B427BFB315F2DC3C00991195 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B427BFB215F2DC3C00991195 /* CoreData.framework */; };
 		B427BFB615F2E40A00991195 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B427BFB515F2E40A00991195 /* SettingsViewController.m */; };
-		B427BFB815F2E7DD00991195 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B427BFB715F2E7DD00991195 /* CoreData.framework */; };
 		B427BFC115F412D100991195 /* EditableContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B427BFC015F412D100991195 /* EditableContactTableViewCell.m */; };
 		B4B9837715EC6E9500485407 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B9837615EC6E9500485407 /* UIKit.framework */; };
 		B4B9837915EC6E9500485407 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B9837815EC6E9500485407 /* Foundation.framework */; };
@@ -50,6 +49,7 @@
 		C80337CC1653304F0014E7B6 /* ConvoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C80337CB1653304F0014E7B6 /* ConvoTableViewCell.m */; };
 		C80337CF165331A20014E7B6 /* ConvosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C80337CE165331A20014E7B6 /* ConvosTableViewController.m */; };
 		C80337D216540EC60014E7B6 /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C80337D116540EC60014E7B6 /* ContactTableViewCell.m */; };
+		C8077F8E166458EF0066A763 /* ContactPictureButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C8077F8D166458EF0066A763 /* ContactPictureButton.m */; };
 		C809412D1655CF31005243F0 /* compose-pen.png in Resources */ = {isa = PBXBuildFile; fileRef = C809412C1655CF31005243F0 /* compose-pen.png */; };
 /* End PBXBuildFile section */
 
@@ -155,6 +155,8 @@
 		C80337CE165331A20014E7B6 /* ConvosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConvosTableViewController.m; sourceTree = "<group>"; };
 		C80337D016540EC60014E7B6 /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewCell.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		C80337D116540EC60014E7B6 /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewCell.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
+		C8077F8C166458EF0066A763 /* ContactPictureButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactPictureButton.h; sourceTree = "<group>"; };
+		C8077F8D166458EF0066A763 /* ContactPictureButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactPictureButton.m; sourceTree = "<group>"; };
 		C809412C1655CF31005243F0 /* compose-pen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose-pen.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,7 +175,6 @@
 				B4B9837715EC6E9500485407 /* UIKit.framework in Frameworks */,
 				B4B9837915EC6E9500485407 /* Foundation.framework in Frameworks */,
 				B4B9837B15EC6E9500485407 /* CoreGraphics.framework in Frameworks */,
-				B427BFB815F2E7DD00991195 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +273,8 @@
 				B4B9838615EC6E9500485407 /* AppDelegate.m */,
 				B4B9838815EC6E9500485407 /* MainStoryboard_iPhone.storyboard */,
 				B4B9838B15EC6E9500485407 /* MainStoryboard_iPad.storyboard */,
+				C8077F8C166458EF0066A763 /* ContactPictureButton.h */,
+				C8077F8D166458EF0066A763 /* ContactPictureButton.m */,
 				C80337CA1653304F0014E7B6 /* ConvoTableViewCell.h */,
 				C80337CB1653304F0014E7B6 /* ConvoTableViewCell.m */,
 				C80337CD165331A20014E7B6 /* ConvosTableViewController.h */,
@@ -372,7 +375,7 @@
 		B4B9836915EC6E9500485407 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Peter Mikelsons";
 			};
 			buildConfigurationList = B4B9836C15EC6E9500485407 /* Build configuration list for PBXProject "GromMail" */;
@@ -491,6 +494,7 @@
 				C80337CC1653304F0014E7B6 /* ConvoTableViewCell.m in Sources */,
 				C80337CF165331A20014E7B6 /* ConvosTableViewController.m in Sources */,
 				C80337D216540EC60014E7B6 /* ContactTableViewCell.m in Sources */,
+				C8077F8E166458EF0066A763 /* ContactPictureButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

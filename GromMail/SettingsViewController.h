@@ -2,7 +2,7 @@
 //  SettingsViewController.h
 //  GromMail
 //
-//  Created by kaon on 9/1/12.
+//  Created by Peter on 9/1/12.
 //  Copyright (c) 2012 Peter Mikelsons. All rights reserved.
 //
 

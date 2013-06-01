@@ -175,5 +175,16 @@
          landmarkName = "-initWithCoder:"
          landmarkType = "5">
       </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GromMail/DrawingView.h"
+         timestampString = "391812150.252632"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "8"
+         endingLineNumber = "8">
+      </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

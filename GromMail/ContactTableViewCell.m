@@ -3,7 +3,7 @@
 //  
 //
 //  Created by Peter Mikelsons on 11/14/12.
-//  Copyright (c) 2012 Peter Mikelsons. All rights reserved.
+//  Copyright (c) 2013 Peter Mikelsons. All rights reserved.
 //
 //
 

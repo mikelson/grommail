@@ -3,7 +3,7 @@
 //  GromMail
 //
 //  Created by Peter on 9/1/12.
-//  Copyright (c) 2012 Peter Mikelsons. All rights reserved.
+//  Copyright (c) 2013 Peter Mikelsons. All rights reserved.
 //
 
 #import "MyViewController.h"

@@ -15,14 +15,6 @@
 
 - (void)setButtonImage:(UIImage*)image
 {
-    if (image) {
-        //[pictureButton setTitle:nil forState:UIControlStateNormal];
-    } else {
-        //[pictureButton setTitle:@"add photo" forState:UIControlStateNormal];
-        NSBundle* bundle = [NSBundle mainBundle];
-        NSString* path = [bundle pathForResource:@"contact-placeholder" ofType:@"jpg"];
-        image = [UIImage imageWithContentsOfFile:path];
-    }
     pictureView.image = image;
 }
 

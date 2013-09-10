@@ -33,6 +33,19 @@
     return self;
 }
 
+- (void)setImage:(UIImage*)image
+{
+    if (image) {
+        //[pictureButton setTitle:nil forState:UIControlStateNormal];
+        super.image = image;
+    } else {
+        //[pictureButton setTitle:@"add photo" forState:UIControlStateNormal];
+        NSBundle* bundle = [NSBundle mainBundle];
+        NSString* path = [bundle pathForResource:@"contact-placeholder" ofType:@"jpg"];
+        super.image = [UIImage imageWithContentsOfFile:path];
+    }
+}
+
 - (void)setTapTarget:(id)target action:(SEL)action
 {
     // Assume it only has one gesture allowed: the tap. Remove any old tap.

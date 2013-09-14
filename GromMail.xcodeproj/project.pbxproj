@@ -51,6 +51,7 @@
 		C80337D216540EC60014E7B6 /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C80337D116540EC60014E7B6 /* ContactTableViewCell.m */; };
 		C8077F8E166458EF0066A763 /* ContactPictureButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C8077F8D166458EF0066A763 /* ContactPictureButton.m */; };
 		C809412D1655CF31005243F0 /* compose-pen.png in Resources */ = {isa = PBXBuildFile; fileRef = C809412C1655CF31005243F0 /* compose-pen.png */; };
+		C89B585517D0EE0B001F8C9B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C89B585417D0EE0B001F8C9B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,13 +75,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = F8DFCF4915801A5000C01975;
 			remoteInfo = Tests;
-		};
-		6DEE02C3160A567600A36469 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6DEE029A160A55E000A36469 /* MailCore.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8618B5610DADB5C00C41188;
-			remoteInfo = "MailCore iOS";
 		};
 		B4B9839B15EC6E9500485407 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -158,6 +152,7 @@
 		C8077F8C166458EF0066A763 /* ContactPictureButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactPictureButton.h; sourceTree = "<group>"; };
 		C8077F8D166458EF0066A763 /* ContactPictureButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactPictureButton.m; sourceTree = "<group>"; };
 		C809412C1655CF31005243F0 /* compose-pen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "compose-pen.png"; sourceTree = "<group>"; };
+		C89B585417D0EE0B001F8C9B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +199,7 @@
 		B41C895115EDD3EA00A26B03 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C89B585417D0EE0B001F8C9B /* Default-568h@2x.png */,
 				C809412C1655CF31005243F0 /* compose-pen.png */,
 				6DC6343E1613E08000EB6772 /* paint-black.tif */,
 				6DC6343F1613E08000EB6772 /* paint-blue.tif */,
@@ -343,7 +339,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				6DEE02C4160A567600A36469 /* PBXTargetDependency */,
 			);
 			name = GromMail;
 			productName = GromMail;
@@ -445,6 +440,7 @@
 				6DC6344C1613E08000EB6772 /* paint-white.tif in Resources */,
 				6DC6344D1613E08000EB6772 /* paint-yellow.tif in Resources */,
 				C809412D1655CF31005243F0 /* compose-pen.png in Resources */,
+				C89B585517D0EE0B001F8C9B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,11 +505,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6DEE02C4160A567600A36469 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "MailCore iOS";
-			targetProxy = 6DEE02C3160A567600A36469 /* PBXContainerItemProxy */;
-		};
 		B4B9839C15EC6E9500485407 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B4B9837115EC6E9500485407 /* GromMail */;

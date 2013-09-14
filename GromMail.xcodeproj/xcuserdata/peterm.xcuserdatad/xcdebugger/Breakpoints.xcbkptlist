@@ -8,68 +8,68 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GromMail/ContactTableViewCell.m"
-         timestampString = "376279298.030592"
+         timestampString = "392791126.153233"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "105"
-         endingLineNumber = "105">
+         startingLineNumber = "97"
+         endingLineNumber = "97">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GromMail/ContactTableViewCell.m"
-         timestampString = "376279298.030592"
+         timestampString = "392791126.153233"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "140"
-         endingLineNumber = "140">
+         startingLineNumber = "132"
+         endingLineNumber = "132">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GromMail/ContactTableViewCell.m"
-         timestampString = "376279298.030592"
+         timestampString = "392791126.153233"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "95"
-         endingLineNumber = "95">
+         startingLineNumber = "87"
+         endingLineNumber = "87">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GromMail/ContactTableViewCell.m"
-         timestampString = "376279298.030592"
+         timestampString = "392791126.153233"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "94"
-         endingLineNumber = "94">
+         startingLineNumber = "86"
+         endingLineNumber = "86">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GromMail/ContactTableViewCell.m"
-         timestampString = "376279298.030592"
+         timestampString = "392791126.153233"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "27"
-         endingLineNumber = "27"
-         landmarkName = "@implementation ContactTableViewCell"
-         landmarkType = "3">
+         startingLineNumber = "19"
+         endingLineNumber = "19"
+         landmarkName = "-setButtonImage:"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GromMail/ContactTableViewCell.m"
-         timestampString = "376279298.030592"
+         timestampString = "392791126.153233"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "43"
-         endingLineNumber = "43">
+         startingLineNumber = "35"
+         endingLineNumber = "35">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"

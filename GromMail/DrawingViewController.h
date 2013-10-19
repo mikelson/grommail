@@ -22,7 +22,7 @@
 
 @property (readonly) UIColor* color;
 
-@property (weak, nonatomic) IBOutlet ContactPictureButton *contactPictureView;
+@property (weak, nonatomic) IBOutlet ContactPictureButton *contactPictureButton;
 @property IBOutlet DrawingView *drawingView;
 
 - (IBAction)setColorToNormalTitle:(UIButton *)sender;

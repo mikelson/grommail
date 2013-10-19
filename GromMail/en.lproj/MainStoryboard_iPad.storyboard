@@ -421,7 +421,7 @@
                                     <action selector="setColorToNormalTitle:" destination="UpO-yj-n4F" eventType="touchUpInside" id="oZu-X9-P6W"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="contact-placeholder.jpg" id="tuq-lw-yYy" customClass="ContactPictureButton">
+                            <imageView contentMode="scaleToFill" image="contact-placeholder.jpg" id="tuq-lw-yYy" customClass="ContactPictureButton">
                                 <rect key="frame" x="156" y="564" width="128" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -431,7 +431,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Compose" id="g06-wk-gb4"/>
                     <connections>
-                        <outlet property="contactPictureView" destination="tuq-lw-yYy" id="cfd-KH-6mr"/>
+                        <outlet property="contactPictureButton" destination="tuq-lw-yYy" id="Y1X-A7-cHE"/>
                         <outlet property="drawingView" destination="S78-ud-L5K" id="kfn-A0-EMW"/>
                     </connections>
                 </viewController>

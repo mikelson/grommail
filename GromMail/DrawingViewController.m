@@ -48,16 +48,22 @@
 - (void)viewDidUnload
 {
     [self setDrawingView:nil];
-    [self setContactPictureView:nil];
+    [self setContactPictureButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+- (void)sendMail
+{
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
 //    self.user = [AppDelegate getUser];
     
-    self.contactPictureView.image = [UIImage imageWithData:self.contact.picture];
+    self.contactPictureButton.image = [UIImage imageWithData:self.contact.picture];
+    [self.contactPictureButton setTapTarget:self action:@selector(sendMail)];
     
     // Try to read draft image from model.
     self.drawingView.image = [UIImage imageWithData:self.contact.draftImage];
@@ -69,7 +75,7 @@
 {
     [super viewDidDisappear:animated];
     
-    [self setContactPictureView:nil];
+    [self setContactPictureButton:nil];
     
     // Save draft image data to model.
     [self.drawingView saveViewToImage];

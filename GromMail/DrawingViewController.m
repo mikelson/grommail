@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Peter Mikelsons. All rights reserved.
 //
 
+#import <MailCore/MailCore.h>
+//#import <MailCore/MCOConstants.h>
 #import "DrawingViewController.h"
 #import "DrawingView.h"
 #import "Contact.h"
@@ -55,7 +57,33 @@
 
 - (void)sendMail
 {
+    MCOSMTPSession *smtpSession = [[MCOSMTPSession alloc] init];
+    smtpSession.hostname = @"smtp.gmail.com";
+    smtpSession.port = 465;
+    smtpSession.username = @"matt@gmail.com";
+    smtpSession.password = @"password";
+    smtpSession.authType = MCOAuthTypeSASLPlain;
+    smtpSession.connectionType = MCOConnectionTypeTLS;
     
+    MCOMessageBuilder *builder = [[MCOMessageBuilder alloc] init];
+    MCOAddress *from = [MCOAddress addressWithDisplayName:@"Matt R"
+                                                  mailbox:@"matt@gmail.com"];
+    MCOAddress *to = [MCOAddress addressWithDisplayName:nil
+                                                mailbox:@"hoa@gmail.com"];
+    [[builder header] setFrom:from];
+    [[builder header] setTo:@[to]];
+    [[builder header] setSubject:@"My message"];
+    [builder setHTMLBody:@"This is a test message!"];
+    NSData * rfc822Data = [builder data];
+    
+    MCOSMTPSendOperation *sendOperation = [smtpSession sendOperationWithData:rfc822Data];
+    [sendOperation start:^(NSError *error) {
+        if(error) {
+            NSLog(@"Error sending email: %@", error);
+        } else {
+            NSLog(@"Successfully sent email!");
+        }
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated

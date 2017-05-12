@@ -12,7 +12,7 @@
 @implementation AppDelegate
 
 // Workaround from http://stackoverflow.com/questions/12522491/crash-on-presenting-uiimagepickercontroller-under-ios6/12575058#12575058
-- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
     return UIInterfaceOrientationMaskAll;
 }
 
@@ -64,7 +64,7 @@
 // Returns the NSManagedObjectContext of the UIApplicationDelegate of the UIApplication singleton.
 + (NSManagedObjectContext*)sharedManagedObjectContext
 {
-    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    AppDelegate* appDelegate = (AppDelegate*) [UIApplication sharedApplication].delegate;
     NSManagedObjectContext* context = appDelegate.managedObjectContext;
     return context;
 }
@@ -79,7 +79,7 @@
     
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     if (coordinator != nil) {
-        _managedObjectContext = [[NSManagedObjectContext alloc] init];
+        _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
         [_managedObjectContext setPersistentStoreCoordinator:coordinator];
     }
     return _managedObjectContext;

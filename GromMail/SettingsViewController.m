@@ -79,7 +79,7 @@
     return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
-- (NSUInteger)supportedInterfaceOrientations{
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
     return UIInterfaceOrientationMaskLandscape;
 }
 
